@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { createStackNavigator } from 'react-navigation';
 import { Container, Fab, Icon } from 'native-base';
 import NewTask from './NewTask';
 import AppHeader from './AppHeader';
@@ -10,9 +11,10 @@ class LandingPage extends Component {
     }
 
     onAddItemPress = () => {
-        this.setState({
+        this.props.navigation.navigate('NewTask');
+        /*this.setState({
             isAddWindowOpen: true
-        });
+        });*/
     }
 
     render() {
