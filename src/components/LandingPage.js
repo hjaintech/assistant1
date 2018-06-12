@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
 import { Container, Fab, Icon } from 'native-base';
 import NewTask from './NewTask';
-import AppHeader from './AppHeader';
 
 class LandingPage extends Component {
+    static navigationOptions = {
+        title: 'Assistant',
+    };
+
     state = {
         active: false,
         isAddWindowOpen: false
@@ -25,7 +28,7 @@ class LandingPage extends Component {
 
         return (
             <Container>
-                <AppHeader />
+               
                 {content}
                 <Fab
                     active={this.state.active}

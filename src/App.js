@@ -18,7 +18,16 @@ const RootStack = createStackNavigator(
         NewTask : NewTask
     },
     {
-        initialRouteName : 'Home'
+        initialRouteName : 'Home',
+        navigationOptions: {
+            headerStyle: {
+              backgroundColor: '#3F51B5',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          },
     }
 );
 
